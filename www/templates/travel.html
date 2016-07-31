@@ -1,0 +1,52 @@
+<ion-view view-title="{{travel.title}}">
+  <ion-content>
+
+    <div class="list card">
+      <div class="item item-avatar">
+        <img src="{{travel.profil_pic}}">
+        <p>{{travel.author}} - {{travel.days}} days - {{travel.destination}}</p>
+      </div>
+
+      <div class="item item-image">
+        <img src="{{travel.travel_pic}}">
+      </div>
+
+      <div class="item item-body">
+
+
+          <div class="row">
+            <div class="col" align="right"><input value="{{date}}" type="date"></div>
+            <div class="col"><button class="button button-full button-energized">I want to go!</button></div>
+          </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <h4 class="title">Details</h4>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <h5 class="title">Flights</h5>
+      </div>
+    </div>
+
+    <div class="list card" ng-repeat="flight in travel.flights">
+
+      <div href="#" class="item item-icon-left">
+        <i class="icon ion-plane"></i>
+        from {{flight.from}} to {{flight.to}} with {{flight.airline}}
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <h5 class="title">Activities</h5>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

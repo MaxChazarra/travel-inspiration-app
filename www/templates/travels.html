@@ -1,0 +1,25 @@
+<ion-view view-title="Travel Inspiration">
+  <ion-content>
+
+
+    <div class="list card" ng-repeat="travel in travels">
+      <div class="item item-avatar">
+        <img src="{{travel.profil_pic}}">
+        <a href="#/app/travel/{{travel.id}}"><h2>{{travel.title}}</h2></a>
+        <p>by {{travel.author}} - {{travel.days}} days - {{travel.destination}}</p>
+      </div>
+
+      <div class="item item-image">
+        <a href="#/app/travel/{{travel.id}}"><img src="{{travel.travel_pic}}"></a>
+      </div>
+
+      <div class="item item-body">
+        <p>
+          <a href="#" class="subdued">{{travel.likes}} <i class="ion-ios-heart-outline"></i></a>
+          <a href="#" class="subdued">{{travel.comments}} <i class="ion-ios-chatboxes-outline"></i></a>
+        </p>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>
